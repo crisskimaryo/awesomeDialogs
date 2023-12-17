@@ -102,7 +102,8 @@ class _AssetAnimationState extends State<AssetAnimation>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
-      child: Image.asset('assets/jamii.png' ?? widget.assetPath),
+      child: Image.asset(
+          'packages/awesome_dialog/assets/jamii.png' ?? widget.assetPath),
       builder: (BuildContext context, Widget? child) {
         return Transform.rotate(
           angle: _controller.value * 2.0 * 3.14159, // Rotates the asset
